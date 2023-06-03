@@ -1,0 +1,127 @@
+\pdfbookmark{Title}{title}
+\newgeometry{left=35mm, right=35mm, top=35mm, bottom=35mm}
+
+	\ifthenelse{\boolean{isDiss}}{
+	%------------------------------
+	% DISSERTATION COVER
+	%------------------------------		
+		\begin{titlepage}
+			\begin{center}
+				%------------------------------
+				% LOGO
+				%------------------------------
+				\begin{minipage}{0.6\textwidth}
+				\end{minipage}
+				\hfill
+				\begin{minipage}{0.3\textwidth}
+					\centering
+					\vfill
+					\includegraphics[width=\textwidth]{Logo_tub}
+					\vfill
+				\end{minipage}
+				%------------------------------
+				% TITLE AND AUTHOR INFORMATION
+				%------------------------------
+				\vfill
+				\huge\textbf{\mytitle}
+				\vfill
+				\Large vorgelegt von\\
+				\author\\
+				%------------------------------
+				% UNIVERSITY
+				%------------------------------
+				\vfill
+				von der \myfaculty \\
+				der Technischen Universität Berlin\\
+				zur Erlangung des akademischen Grades\\
+				\vspace{0.5cm}
+				Doktor der Ingenieurwissenschaften\\
+				- Dr.-Ing. -\\
+				\vspace{0.5cm}
+				genehmigte Dissertation
+			\end{center}
+			\vfill
+			%------------------------------
+			% DOCTORAL BOARD
+			%------------------------------
+			\normalsize
+			Promotionsausschuss:\\[2ex]
+			\begin{tabular}{@{}ll}
+			Vorsitzende: & \chairman \\
+			1.~Gutachter: & \firstreviewer \\
+			2.~Gutachter: & \secondreviewer \\
+			\end{tabular}
+			%------------------------------
+			% DATES
+			%------------------------------
+			\vfill
+			Tag der wissenschaftlichen Aussprache: \begin{otherlanguage}{ngerman} \dayofdefense\end{otherlanguage}
+			\vfill
+			\centering
+			\myplace, \the\year		
+		\end{titlepage}
+		}{
+		%------------------------------
+		% THESIS COVER
+		%------------------------------			
+		\begin{titlepage}
+			\begin{center}
+				%------------------------------
+				% LOGOS
+				%------------------------------
+				\hfill
+			\parbox[t][\headheight][t]{5cm}{%
+			\raggedleft
+			\includegraphics[width=0.3\textwidth]{TU-Berlin_logo}
+}
+				%------------------------------
+				% TITLE AND AUTHOR INFORMATION
+				%------------------------------
+				\vfill
+				\huge\textbf{\mytitle}\\[1ex]
+				\Large\iflanguage{english}{\myengsubtitle}					{\iflanguage{ngerman}{\mygersubtitle}{}}\\[1ex]
+				\vfill
+				\normalsize
+				\iflanguage{english}{in the course of studies}		{\iflanguage{ngerman}{im Studiengang}{}}\\
+				\courseofstudy	
+				\vfill			
+				\iflanguage{english}{Submitted by:}		{\iflanguage{ngerman}{Vorgelegt von:}{}}\\
+				\begin{table}[h!]
+				\centering
+					\begin{tabular}{@{}lrc@{}}
+					\toprule
+					\textbf{Co-Authors} & \textbf{Matr.Nr.} & \textbf{Initials} \\ \midrule
+				          \firstauthor	& \mymatriculationnumber       	&  \firstinitial         \\
+				          \secondauthor	& \secondmatriculationnumber	&  \secondinitial        \\
+				          \thirdauthor 	&  \thirdmatriculationnumber	&  \thirdinitial \\
+				          \bottomrule 
+					\end{tabular}
+				\end{table}
+%				
+%				\firstauthor \hfill \secondauthor \hfill \thirdauthor
+%				\vfill
+%				\iflanguage{english}{Matriculation numbers:}					{\iflanguage{ngerman}{Matrikelnummern:}{}}\\
+%				\mymatriculationnumber \hfill \secondmatriculationnumber \hfill \thirdmatriculationnumber
+				%------------------------------
+				% DEPARTMENT AND UNIVERSITY
+				%------------------------------
+				\vfill	
+				\normalsize
+				\iflanguage{english}{Under the scientific supervision of}{\iflanguage{ngerman}{Unter der wissenschaftlichen Leitung von}{}}\\
+				\textbf{\mysupervisor}
+				\vfill
+				\iflanguage{english}{Under the scientific guidance of}{\iflanguage{ngerman}{Unter der wissenschaftlichen Betreuung von}{}}\\
+				\textbf{\myadvisor}
+				\vfill
+				\myplace, \monthyeardate
+				\vfill
+				\myuniversity\\
+				\myfaculty\\
+				\myinstitute\\
+				\mydepartment\\
+			\end{center}				
+		\end{titlepage}
+		}
+
+\restoregeometry%
+%\end{titlepage}

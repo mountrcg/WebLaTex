@@ -1,0 +1,128 @@
+% meta data --------------------------------------------------------------------
+
+%-----------------------------
+% MUST BE CHANGED BY THE USER
+%-----------------------------
+%-----------------------------
+% BOOLEAN FOR DECISION B/M THESIS OR DISSERTATION
+%-----------------------------
+\newboolean{isDiss}
+% Options:
+% true: Dissertation
+% false: Bachelor/Master thesis
+\setboolean{isDiss}{false}
+%-----------------------------
+% BOOLEAN FOR DECISION MASTER OR BACHELOR THESIS
+%-----------------------------
+\newboolean{isMT}
+% Options:
+% true: Master thesis
+% false: Bachelor thesis
+\setboolean{isMT}{false}
+%-----------------------------
+% TITLE AND AUTHOR
+%-----------------------------
+\newcommand{\mytitle}{This Is a Very Good Title That Illustrates What This Great Piece of Work Is All About and That Gives an Impression of What a Long Title Looks Like}
+\newcommand{\firstauthor}{Antonio Günther}
+\newcommand{\mymatriculationnumber}{409741}
+\newcommand{\firstinitial}{AnGÜ}
+\newcommand{\secondauthor}{Amandus Schnipp}
+\newcommand{\secondmatriculationnumber}{409675}
+\newcommand{\secondinitial}{AmSp}
+\newcommand{\thirdauthor}{Elena Schnapp}
+\newcommand{\thirdmatriculationnumber}{409699}
+\newcommand{\thirdinitial}{ElSp}
+%-----------------------------
+% FOR BACHELOR/MASTER THESIS
+%-----------------------------
+\newcommand{\courseofstudy}{Bsc. Geotechnology}
+\newcommand{\myadvisor}{Dr. Ferry Schiperski}
+%-----------------------------
+% KEYWORDS FOR THE ABSTRACT
+%-----------------------------
+\newcommand{\germankeywords}{Schlüsselwort1; Schlüsselwort2; Schlüsselwort3}
+\newcommand{\englishkeywords}{Keyword1; Keyword2; Keyword3}
+%-----------------------------
+% FOR DISSERTATION
+%-----------------------------
+\newcommand{\chairman}{Prof.~Dr.-Ing.~habil.~Martina Superwichtig}
+\newcommand{\firstreviewer}{\mysupervisor}
+\newcommand{\secondreviewer}{Prof.~Dr.-Ing.~Hans-Georg Wichtig}
+\newcommand{\dayofdefense}{\DTMdisplaydate{2020}{1}{1}{-1}}
+%-----------------------------
+% MUST BE CHANGED BY THE USER
+%-----------------------------
+
+
+%-----------------------------
+% NOT TO BE CHANGED BY THE USER
+%-----------------------------
+\newcommand{\myuniversity}{Technische Universität Berlin}
+\newcommand{\myfaculty}{Fakultät VI - Planen Bauen Umwelt}
+\newcommand{\myinstitute}{Institut für Angewandte Geowissenschaften}
+\newcommand{\mydepartment}{Fachgebiet Angewandte Geochemie}
+\newcommand{\myplace}{Berlin}
+\newcommand{\mysupervisor}{Prof.~Dr. Thomas Neumann}
+\newboolean{isSG}
+% Options:
+% true: document in styleguide mode
+% false: dissertation or thesis mode
+\setboolean{isSG}{false}
+\newcommand{\version}{3.3.2}
+\ifthenelse{\boolean{isSG}}{\setboolean{isDiss}{true}}{}
+% Subtitle English
+\newcommand{\myengsubtitle}{Thesis in partial fulfillment of the requirements for the degree \\ \ifthenelse{\boolean{isMT}}{Master}{Bachelor} of Science (\ifthenelse{\boolean{isMT}}{M.Sc.}{B.Sc.})}
+% Subtitle German
+\newcommand{\mygersubtitle}{Wissenschaftliche Arbeit zur Erlangung des Grades \\ \ifthenelse{\boolean{isMT}}{Master}{Bachelor} of Science (\ifthenelse{\boolean{isMT}}{M.Sc.}{B.Sc.})}
+%-----------------------------
+% NOT TO BE CHANGED BY THE USER
+%-----------------------------
+
+%------------------------------------------
+% meta from original Template
+\newcommand{\metaType}{PhD of templates}
+\newcommand{\metaTypeShort}{Dr.-Tmpl.}
+\newcommand{\metaWhy}{To get the degree in}
+\newcommand{\metaHowFinal}{Submitted}
+\newcommand{\metaHowNonFinal}{Draft}
+\newcommand{\metaBoard}{Board}
+\newcommand{\metaSubmitted}{Presented by}
+\newcommand{\metaDate}{16.~Juni~2020}
+\newcommand{\metaDateEn}{16.~June~2020}
+\newcommand{\metaDateExam}{\metaDate}
+\newcommand{\metaNumber}{2020--06}
+\newcommand{\metaTitleLayouted}{Sophisticated Template\\for a Thesis}
+\newcommand{\metaTitle}{Sophisticated Template for a Thesis}
+\newcommand{\metaTitleShort}{Thesis Template}
+\newcommand{\metaDegree}{MTA}
+\newcommand{\metaBirthplace}{Born in Foo Bar}
+\newcommand{\metaAuthor}{First Last}
+\newcommand{\metaAuthorMail}{first.last@example.org}
+\newcommand{\metaKeywords}{Foo, Bar, First, Last}
+\newcommand{\metaSubject}{Template Subject}
+\newcommand{\metaUniversity}{Template University}
+\newcommand{\metaFaculty}{Template Faculty}
+\newcommand{\metaDepartment}{Template Department}
+\newcommand{\metaCitycode}{12345}
+\newcommand{\metaCity}{City}
+\newcommand{\metaCountry}{Country}
+\newcommand{\metaURL}{http://example.org}
+\newcommand{\metaChair}{Chair}
+\newcommand{\metaChairName}{Prof.\ Dr.-Ing.\ Goo Gl}
+\newcommand{\metaChairUniversity}{Industry}
+\newcommand{\metaReviewer}{Reviewer}
+\newcommand{\metaFirstReviewerName}{Prof.\ Dr.-Ing.\ Foo Bar}
+\newcommand{\metaFirstReviewerUniversity}{Example University}
+\newcommand{\metaSecondReviewerName}{Prof.\ Dr.\ Bar Foo}
+\newcommand{\metaSecondReviewerUniversity}{Another University}
+\newcommand{\metaThirdReviewerName}{Dr.\ John Smith}
+\newcommand{\metaThirdReviewerUniversity}{My University}
+\newcommand{\metaFourthReviewerName}{{\color{gray}Dr.\ Jon Doe}}
+\newcommand{\metaFourthReviewerUniversity}{{\color{gray}BAR}}
+
+
+\newcommand{\metaAuthorShort}{\metaAuthor}
+\newcommand{\metaConference}{Conference}
+\newcommand{\metaConferenceArea}{Area}
+\newcommand{\metaDedication}{\scriptsize{Dedicated to my beloved family.}}
+% ------------------------------------------------------------------------------

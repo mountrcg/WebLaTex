@@ -1,0 +1,94 @@
+%/**
+% * LaTeX thesis template (main file)
+% * @author : Alexander willner <alex@willner.ws>
+% * @url    : http://github.com/thesis
+% */
+
+% include config ---------------------------------------------------------------
+\RequirePackage{pdf14}                 % PDF/A2-b compatibility
+%\PassOptionsToPackage{demo}{graphicx} % for faster drafts
+\input{thesis_template.config.tex}     % inlcude general configuration
+\input{src/12_abbreviation-definitions}		% include abbreviations
+\DeclareUnicodeCharacter{0301}{}       % fixing an UTF-8 encoding issue
+%\usepackage[norefs,nocites]{refcheck} % useful, but not working with cref
+%\usepackage[doublespacing]{setspace}  % useful for reviewing a printout
+%\PassOptionsToPackage{cmyk}{xcolor}   % PDF/A compatibility, skipped
+%\usepackage[a-2b]{pdfx}               % PDF/A compatibility, skipped
+\newcommand{\isFinal}{false}            % Modify e.g. the title page
+%\AddLayersToPageStyle{@everystyle@}{chapterthumb}
+%\addtokomafont{chapterthumb}{\bfseries}
+
+%------------------------------
+\graphicspath{{resources/images/}} 		% directory in which LaTeX searches for figures
+
+% ---------Draft settings--------include only required files for faster building ------------------------------
+% \usepackage[demo]{graphicx}     
+%\includeonly{src/03_requirements,src/06_implementation}
+% ------------------------------------------------------------------------------
+%------------------------------
+% BEGIN DOCUMENT
+%------------------------------
+\begin{document}
+%------------------------------
+% COVER
+%------------------------------
+    \frontmatter
+    \pagestyle{empty}
+    \pagenumbering{alph}
+    \input{src/00_title}
+    \cleardoublepage\input{src/00_deposition}
+%------------------------------
+% PREMATTER
+%------------------------------
+    \pagestyle{scrheadings}
+    %\lohead[]{}
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    \input{src/00_acknowledgment}\cleardoublepage{}
+    \input{src/00_abstract}\cleardoublepage
+%------------------------------
+% LISTS OF...
+%------------------------------
+    \phantomsection
+    \input{src/00_tables}\cleardoublepage
+%------------------------------
+% CONTENT
+%------------------------------
+    \mainmatter
+    %\lohead[\putchapterthumb]{\putchapterthumb}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+    %\linenumbers
+    \acresetall%
+    %\input{src/01_introduction}
+    \input{src/02_sota}
+%    \input{src/03_requirements}
+%    \input{src/04_contrib1}
+%    \input{src/05_contrib2}
+%    \input{src/06_contrib3}
+%    \input{src/07_evaluation}
+%    \input{src/08_summary}
+    \nolinenumbers
+    \cleardoublepage
+%------------------------------
+% APPENDIX
+%------------------------------
+    \appendix
+    \pagenumbering{Roman}
+    \setcounter{page}{1}
+    \input{src/09_appendix}
+%------------------------------
+% REFERENCES
+%------------------------------
+    \cleardoublepage
+    \input{src/10_bibliography}
+%------------------------------
+% INDEX
+%------------------------------
+    \backmatter
+    \cleardoublepage\input{src/11_index}
+%------------------------------
+% END DOCUMENT
+%------------------------------
+\end{document}
+% ------------------------------------------------------------------------------
